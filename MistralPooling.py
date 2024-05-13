@@ -9,3 +9,7 @@ for q in df['Example']:
 LLMOutputs = []
 with Pool(processes=len(prompts)) as pool:
     LLMOutputs = pool.map(Generate_m7b.generate_m7b_output, prompts)
+for q in range(0, len(LLMOutputs), 1):
+    print("Prompt: " + prompts[q])
+    print(" ")
+    print("LLM Output: " + LLMOutputs[q])
