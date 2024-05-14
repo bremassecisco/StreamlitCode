@@ -4,7 +4,7 @@ import fire
 from llama import Llama
 
 def main(
-    ckpt_dir: str = "../llama3/Meta-Llama-3-8B",
+    ckpt_dir: str = "../llama3/Meta-Llama-3-8B/consolidated.00.pth",
     tokenizer_path: str = "../llama3/Meta-Llama-3-8B/tokenizer.model",
     temperature: float = 0.6,
     top_p: float = 0.9,
