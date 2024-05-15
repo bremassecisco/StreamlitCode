@@ -6,7 +6,7 @@ from multiprocessing import Pool
 import pandas as pd
 import ollama
 
-def run_prompt(prompt, model = "llama3:latest"):
+def run_prompt_processing(prompt, model = "llama3:latest"):
     client = OpenAI(base_url="http://localhost:11434/v1", api_key="ignore-me")
     tc = TokenCount(model_name="gpt-3.5-turbo")
     start = time.time()
@@ -42,7 +42,7 @@ if __name__ == "__main__":
     LLMOutputs = []
     time_taken_list = []
     with Pool(processes=len(prompts)) as pool:
-        LLMOutputs = pool.map(run_prompt, prompts)
+        LLMOutputs = pool.map(run_prompt_processing, prompts)
     
     for q in range(0, len(LLMOutputs), 1):
         print("Input: " + prompts[q])
