@@ -34,11 +34,7 @@ def run_prompt_processing(prompt, model = "llama3:latest"):
 
 if __name__ == "__main__":
     #prompt = """Rewrite the following three sentence structure as one fluid sentence: The cat that is fat. The cat that is lazy. The cat that is sleeping."""
-    models = [
-        m['name'] 
-        for m in ollama.list()["models"]
-        if m["details"]["family"] in ["llama", "gemma"]
-    ]   
+    print(ollama.list())  
     print(models)
     filename = "ThatClauseOutput.csv"
     df = pd.read_csv(filename)
