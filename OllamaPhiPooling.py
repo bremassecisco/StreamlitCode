@@ -25,11 +25,8 @@ def run_prompt(prompt, model = "phi3:latest"):
             end = time.time()
             time_taken = end-start
             tokens = tc.num_tokens_from_string(streamed_text)
-            print(f"""**Duration: [{time_taken:.2f} secs]**
-            **Eval count: [{tokens} tokens]**
-            **Eval rate: [{tokens / time_taken:.2f} tokens/s]**
-            """)  # Print the evaluation metrics to the terminal
-    return streamed_text, (tokens / time_taken)
+            
+    return streamed_text, time_taken
 
 
 if __name__ == "__main__":
