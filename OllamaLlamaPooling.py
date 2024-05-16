@@ -39,7 +39,7 @@ if __name__ == "__main__":
     LLMOutputs = []
     time_taken_list = []
     with Pool(processes=len(prompts)) as pool:
-        LLMOutputs = pool.map(run_prompt_processing, prompts)
+        LLMOutputs = pool.map(run_prompt, prompts)
     
     for q in range(0, len(LLMOutputs), 1):
         print("Input: " + prompts[q])
