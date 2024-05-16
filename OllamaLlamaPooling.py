@@ -47,6 +47,7 @@ if __name__ == "__main__":
     for q in range(0, len(LLMOutputs), 1):
         print("Input: " + prompts[q])
         print("Output: " + LLMOutputs[q][0])
+        print("Time taken: " + str(LLMOutputs[q][1]))
         time_taken_list.append(LLMOutputs[q][1])
         print(" ")
 
