@@ -48,5 +48,6 @@ if __name__ == "__main__":
         print("Input: " + prompts[q])
         print("Output: " + LLMOutputs[q][0])
         time_taken_list.append(LLMOutputs[q][1])
+        print(" ")
 
     print("Average time taken is: " + str(sum(time_taken_list) / len(time_taken_list)) + " seconds.")
