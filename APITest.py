@@ -3,7 +3,7 @@ import json
 
 def main():
     print("Code started.")
-    url = 'http://3.214.88.86:5000/run_code'
+    url = 'http://10.11.3.236:5000/run_code'
     headers = {'Content-Type': 'application/json'}
     data = {'input_data': 'Please clarify whether or not corn is a fruit or a vegetable.'}
 
