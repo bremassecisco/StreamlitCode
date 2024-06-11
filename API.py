@@ -6,6 +6,7 @@ app = Flask(__name__)
 # Define a route for the API
 @app.route('/run_code', methods=['POST'])
 def run_code():
+    print("Made it to run_code.")
     # Extract the input data from the request
     input_data = request.json
     
@@ -19,4 +20,5 @@ def run_code():
     return jsonify(result)
 
 if __name__ == '__main__':
+    print("Made it to API.py")
     app.run(host='0.0.0.0', port=5000)
