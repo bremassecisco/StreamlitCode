@@ -7,11 +7,15 @@ from openai import AsyncOpenAI
 from openai import OpenAI
 
 def run_prompt(integer, prompt, model = "phi3:latest"):
+    print(integer)
     if integer % 3 == 0:
+        print("phi3")
         model = "phi3:latest"
     elif integer % 3 == 1:
+        print("llama3")
         model = "llama3:latest"
     else:
+        print("mistral")
         model = "mistral:latest"
     client = OpenAI(base_url="http://localhost:11434/v1", api_key="ignore-me")
     stream = client.chat.completions.create(
