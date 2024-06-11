@@ -13,10 +13,6 @@ def main():
     try:
         response = requests.post(url, headers=headers, data=json.dumps(data))
         print(f'Status code: {response.status_code}')
-        
-        # Print the raw response content for debugging
-        print('Raw response content:', response.text)
-        
         # Try to parse JSON response
         try:
             response_json = response.json()
