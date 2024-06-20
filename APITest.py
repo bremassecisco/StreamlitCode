@@ -4,7 +4,7 @@ import json
 
 def main(string_data, int_data):
     print("Code started.")
-    url = 'http://10.11.3.236:5000/run_code'
+    url = 'http://3.214.88.86:80/run_code'
     headers = {'Content-Type': 'application/json'}
     data = {
         'string_data': string_data,

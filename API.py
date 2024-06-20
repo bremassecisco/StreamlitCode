@@ -21,4 +21,4 @@ def run_code():
 
 if __name__ == '__main__':
     print("Made it to API.py")
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0', port=80)
