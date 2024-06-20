@@ -1,4 +1,5 @@
 import requests
+import argparse
 import json
 
 def main(string_data, int_data):
@@ -23,4 +24,9 @@ def main(string_data, int_data):
         print(f'An error occurred: {e}')
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(description='Process some inputs.')
+    parser.add_argument('string_data', type=str, help='A string input')
+    parser.add_argument('int_data', type=int, help='An integer input')
+    
+    args = parser.parse_args()
+    main(args.string_data, args.int_data)
