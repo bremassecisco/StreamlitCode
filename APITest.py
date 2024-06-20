@@ -1,13 +1,13 @@
 import requests
 import json
 
-def main():
+def main(string_data, int_data):
     print("Code started.")
-    url = 'http://127.0.0.1:5000/run_code'
+    url = 'http://3.214.88.86:5000/run_code'
     headers = {'Content-Type': 'application/json'}
     data = {
-        'string_data': 'Please clarify whether or not corn is a fruit or a vegetable.',
-        'int_data': 2,
+        'string_data': string_data,
+        'int_data': int_data,
         }
 
     try:
